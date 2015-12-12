@@ -294,8 +294,10 @@ describe('sourcemap-concat', function() {
     builder = new broccoli.Builder(node);
     var reason;
     return builder.build().catch(function(rejectionReason) {
+      console.log('LOG CATCH');
       reason = rejectionReason;
     }).then(function(){
+      console.log('LOG THEN');
       expect(reason).to.be;
       expect(reason.message).to.eql("ConcatWithMaps: nothing matched [nothing/*.js]");
     });
