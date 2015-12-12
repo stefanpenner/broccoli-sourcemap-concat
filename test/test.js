@@ -285,7 +285,7 @@ describe('sourcemap-concat', function() {
     });
   });
 
-  it('does not ignore empty content when allowNone is not explicitly set', function() {
+  it.only('does not ignore empty content when allowNone is not explicitly set', function() {
     var node = concat(firstFixture, {
       outputFile: '/nothing.js',
       inputFiles: ['nothing/*.js']
